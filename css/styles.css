@@ -4,6 +4,7 @@
   /* COLORS */
   --black: #171717;
   --grey1: #242424;
+  --back-opacity10: hsla(0, 0%, 9%, 0.903);
   --white-bg: rgb(238, 238, 238);
 
   /* SPACING */
@@ -13,7 +14,9 @@
   /* FONTS */
   --h-family: "Montserrat", serif;
   --p-family: "Open Sans", serif;
+
   /* FONT SIZES */
+  --p-size: 1.8rem;
 
   /* FONT WEIGHTS */
   --bold: 700;
@@ -229,15 +232,8 @@ header .nav-icon {
 
 /* ABOUT ME */
 .about-me-s {
-  gap: 2.4rem;
+  gap: 4.2rem;
   padding: 6rem var(--mobile-side-spacing);
-}
-
-.about-me-s h1 {
-  border: 4px solid white;
-  border-top: none;
-  padding: 1rem;
-  margin-bottom: 3rem;
 }
 
 .about-me-s p {
@@ -246,6 +242,152 @@ header .nav-icon {
   line-height: 1.5;
   font-weight: var(--light);
 }
+
+/* SKILLS */
+.skills-s {
+  background-color: var(--white-bg);
+  color: var(--black);
+  padding: 6rem var(--mobile-side-spacing);
+  gap: 4.2rem;
+}
+
+.skills-s > h1 {
+  border-color: var(--black);
+}
+.skills-s .value-box {
+  position: relative;
+  z-index: 5;
+}
+
+.skills-s i {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  font-size: 20rem;
+  color: rgb(228, 227, 227);
+  z-index: 0;
+}
+
+.skills-s .value-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.skills-s .value-box p {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+/* TECHNOLOGIES */
+.tech-s {
+  padding: 6rem var(--mobile-side-spacing);
+  background-color: var(--black);
+}
+
+.tech-s .inner-scroller img {
+  height: 6rem;
+}
+
+.tech-s .scroller[data-animated="true"] .inner-scroller {
+  animation: scroll-right 10s linear infinite;
+  width: max-content;
+  gap: 3rem;
+  background-color: var(--white-bg);
+  padding-block: 1.2rem;
+}
+
+/* PROJECTS-SECTION */
+.projects-s {
+  padding: 6rem var(--mobile-side-spacing);
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../assets/projects.png);
+  filter: blur(1px);
+}
+
+/* dropdown */
+.dropdown {
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-toggle {
+  color: white;
+  font-family: var(--p-family);
+  background-color: rgba(0, 0, 0, 0.587);
+  font-size: 3rem;
+  padding: 0.8rem 1.8rem;
+}
+
+.dropdown-toggle i.dropdown-pointer {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  width: 100%;
+  background-color: #171717;
+}
+
+.dropdown-menu li {
+  font-size: 2.4rem;
+  padding: 0.8rem 1.8rem;
+  color: rgb(139, 139, 139);
+}
+
+/* websites container*/
+.projects-container {
+  padding-block: var(--mobile-side-spacing);
+  padding-block: 6rem;
+}
+
+.project-box {
+  width: 100%;
+  background-color: #171717cd;
+  gap: 1.8rem;
+  padding: 1.2rem;
+}
+
+.project-box .project-img {
+  width: 100%;
+  object-fit: cover;
+  /* aspect-ratio: 4 / 3; */
+  /* filter: blur(1px); */
+}
+
+.project-box .project-title {
+  font-size: 2.4rem;
+}
+
+.project-box .project-text {
+  font-size: 1.8rem;
+  font-weight: var(--light);
+}
+
+.project-box a {
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: white;
+  color: #171717;
+  padding: 0.8rem 2.4rem;
+}
+
+.project-box .git-btn {
+  background-color: rgba(255, 255, 255, 0.49);
+}
+/* toggle map*/
+/* button toggles display class (hides or reveals options) */
+/* When li is pressed 2 things happen */
+/* 1st - li text goes to the top, I could create arry where all possible options will be stored. When button pressed again, other options should be shown */
+/* 2nd - also is should clear section where all project boxes are stored and display only selected */
 
 /* MOBILE NAV BUG: when screen is square it moves nav to view */
 /* MOBILE NAV BUG2: NAV is on top of header (header has context and NAV is part of it) */

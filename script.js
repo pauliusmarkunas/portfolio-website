@@ -11,12 +11,32 @@ hamburgerBtn.addEventListener("click", (e) => {
 });
 
 // SCROLLER
-const scroller = document.querySelector(".scroller");
+const scrollers = document.querySelectorAll(".scroller");
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   scrollAnimation();
 }
 
 function scrollAnimation() {
-  scroller.setAttribute("data-animated", true);
+  scrollers.forEach((e) => e.setAttribute("data-animated", true));
 }
+
+// DROPDOWN MENU PROJECTS
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+// Toggle the dropdown menu visibility on button click
+dropdownButton.addEventListener("click", () => {
+  const isVisible = dropdownMenu.style.display === "block";
+  dropdownMenu.style.display = isVisible ? "none" : "block";
+});
+
+// Close the dropdown menu if clicked outside
+document.addEventListener("click", (event) => {
+  if (
+    !dropdownButton.contains(event.target) &&
+    !dropdownMenu.contains(event.target)
+  ) {
+    dropdownMenu.style.display = "none";
+  }
+});
