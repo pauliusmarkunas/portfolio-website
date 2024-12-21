@@ -1,0 +1,252 @@
+@import url("general.css");
+
+:root {
+  /* COLORS */
+  --black: #171717;
+  --grey1: #242424;
+  --white-bg: rgb(238, 238, 238);
+
+  /* SPACING */
+  --section-width: 122px;
+  --mobile-side-spacing: 1.8rem;
+
+  /* FONTS */
+  --h-family: "Montserrat", serif;
+  --p-family: "Open Sans", serif;
+  /* FONT SIZES */
+
+  /* FONT WEIGHTS */
+  --bold: 700;
+  --regular: 500;
+  --light: 300;
+
+  /* SCREEN WIDTHS */
+  --s-mobile: 320px;
+  --m-mobile: 375px;
+  --s-desktop: 1024px;
+  --l-desktop: 1440px;
+
+  /* OTHER */
+  --header-height: 75px;
+}
+
+/* BASE 375 px */
+/* HEADER */
+header {
+  background-color: var(--grey1);
+  height: var(--header-height);
+  padding-inline: var(--mobile-side-spacing);
+  position: relative;
+  z-index: 2;
+}
+
+header a {
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
+header .logo {
+  width: 4.2rem;
+  transform: scale(1.5);
+}
+
+header nav {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  bottom: calc(-100vh + var(--header-height));
+  padding-top: 4.2rem;
+  transform: translateY(calc(-100% - var(--header-height)));
+  transition: transform 0.5s ease-in-out;
+  background-color: #171717;
+}
+
+header nav.active {
+  transform: translateY(0);
+}
+
+header nav ul {
+  gap: 3rem;
+}
+
+header nav ul li {
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 0;
+}
+
+header nav ul li:hover {
+  background-color: white;
+}
+
+header nav ul li:hover a {
+  color: #171717;
+}
+
+header nav ul li:last-child {
+  background-color: white;
+}
+
+header nav ul li:last-child a {
+  color: #171717;
+}
+
+header nav a {
+  font-size: 3rem;
+}
+
+header .nav-icon {
+  font-size: 4.2rem;
+  color: rgba(255, 255, 255, 0.748);
+}
+
+/* SOCIAL LINKS (ADDITIONAL CONTAINER) */
+.nav-other {
+  margin-top: 6rem;
+  color: #fff;
+  gap: 0.8rem;
+}
+
+.nav-other p:first-child {
+  font-size: 1.8rem;
+  font-family: var(--p-family);
+  font-weight: var(--light);
+}
+
+.nav-other p:nth-child(2) {
+  font-size: 2rem;
+  font-family: var(--h-family);
+  text-align: center;
+}
+
+.nav-other .social-links {
+  gap: 3rem;
+  margin-top: 1.8rem;
+  i {
+    font-size: 4rem;
+  }
+}
+
+/* HERO */
+/* .hero-s,
+.hero-s * {
+} */
+
+.hero-s {
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-s img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -10;
+}
+
+.hero-s .overlay {
+  width: 150%;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.678);
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50px, 50%) rotate(15deg);
+  z-index: -9;
+}
+
+.hero-s .container {
+  align-items: start;
+  gap: 1.2rem;
+  width: 100%;
+  padding-inline: var(--mobile-side-spacing);
+}
+
+.hero-s .text {
+  font-family: var(--h-family);
+  font-size: 1.8rem;
+}
+
+/* scroller */
+.scroller {
+  width: 100%;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    white 30%,
+    white 70%,
+    transparent 100%
+  );
+
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    white 30%,
+    white 70%,
+    transparent 100%
+  );
+}
+
+.scroller[data-animated="true"] .inner-scroller {
+  animation: scroll 10s linear infinite;
+  width: max-content;
+}
+
+.inner-scroller {
+  display: flex;
+  div {
+    white-space: nowrap;
+    font-size: 3rem;
+    font-family: var(--h-family);
+    font-weight: var(--bold);
+  }
+}
+
+.hero-s .links-container {
+  width: 100%;
+  margin-bottom: 3rem;
+  z-index: 10;
+}
+
+.hero-s .cta-btn {
+  font-size: 1.8rem;
+  background-color: #171717;
+  padding: 0.8rem 1.8rem;
+}
+
+.hero-s .social-links {
+  font-size: 2.6rem;
+  gap: 2.4rem;
+}
+
+/* ABOUT ME */
+.about-me-s {
+  gap: 2.4rem;
+  padding: 6rem var(--mobile-side-spacing);
+}
+
+.about-me-s h1 {
+  border: 4px solid white;
+  border-top: none;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.about-me-s p {
+  font-size: var(--p-size);
+  text-align: justify;
+  line-height: 1.5;
+  font-weight: var(--light);
+}
+
+/* MOBILE NAV BUG: when screen is square it moves nav to view */
+/* MOBILE NAV BUG2: NAV is on top of header (header has context and NAV is part of it) */
+/* also scroll up first so if user clicks on hamburger lower then then top page*/
