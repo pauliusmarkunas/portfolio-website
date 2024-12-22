@@ -43,6 +43,7 @@
 html {
   font-size: 62.5%;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -191,6 +192,13 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+
+.grid-one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ANIMATIONS */

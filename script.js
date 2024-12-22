@@ -3,11 +3,21 @@
 // MOBILE NAV
 const hamburgerBtn = document.querySelector(".nav-icon");
 const navSection = document.querySelector("header nav");
+const navLinks = document.querySelector("header nav ul");
 hamburgerBtn.addEventListener("click", (e) => {
   hamburgerBtn.classList.toggle("fa-bars");
   hamburgerBtn.classList.toggle("fa-xmark");
   navSection.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
+});
+
+navLinks.addEventListener("click", (e) => {
+  if (e.target !== navLinks) {
+    document.body.classList.remove("no-scroll");
+    hamburgerBtn.classList.toggle("fa-bars");
+    hamburgerBtn.classList.toggle("fa-xmark");
+    navSection.classList.toggle("active");
+  }
 });
 
 // SCROLLER

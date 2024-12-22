@@ -55,7 +55,6 @@ header .logo {
 }
 
 header nav {
-  /* display: none; */
   position: absolute;
   top: 100%;
   left: 0;
@@ -82,7 +81,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.615);
 }
 
 header nav ul li:hover a {
@@ -147,7 +146,7 @@ header .nav-icon {
 }
 
 .hero-s img {
-  width: 100%;
+  height: calc(100vh - var(--header-height));
   position: absolute;
   bottom: 0;
   z-index: -10;
@@ -256,6 +255,10 @@ header .nav-icon {
   gap: 4.2rem;
 }
 
+.skills-s .container {
+  gap: 6rem;
+}
+
 .skills-s > h1 {
   border-color: var(--black);
 }
@@ -269,7 +272,7 @@ header .nav-icon {
   top: 50%;
   left: 0%;
   transform: translate(0, -50%);
-  font-size: 20rem;
+  font-size: 16rem;
   color: rgb(228, 227, 227);
   z-index: 0;
 }
@@ -283,11 +286,12 @@ header .nav-icon {
 .skills-s .value-box p {
   font-size: 1.6rem;
   position: relative;
+  text-align: justify;
 }
 
 /* TECHNOLOGIES */
 .tech-s {
-  padding: 6rem var(--mobile-side-spacing);
+  padding: 12rem var(--mobile-side-spacing);
   background-color: var(--black);
 }
 
@@ -311,6 +315,10 @@ header .nav-icon {
 .projects-s {
   padding: 6rem var(--mobile-side-spacing);
   position: relative;
+}
+
+.projects-s .h-primary {
+  justify-self: center;
 }
 
 .bg-img {
@@ -587,11 +595,59 @@ footer > p {
   font-size: 1.4rem;
 }
 
-/* toggle map*/
-/* button toggles display class (hides or reveals options) */
-/* When li is pressed 2 things happen */
-/* 1st - li text goes to the top, I could create arry where all possible options will be stored. When button pressed again, other options should be shown */
-/* 2nd - also is should clear section where all project boxes are stored and display only selected */
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  :root {
+    --mobile-side-spacing: calc((100vw - 700px) * 0.5);
+  }
+
+  /* HEADER */
+  header {
+    justify-content: space-between;
+  }
+
+  header nav {
+    position: static;
+    transform: initial;
+    padding-top: 0;
+    background-color: transparent;
+    width: auto;
+  }
+  header nav ul {
+    flex-direction: row !important;
+    gap: 2.4remrem;
+    a {
+      font-size: 1.8rem;
+      white-space: nowrap;
+      padding: 0.8rem 1.8rem;
+    }
+  }
+
+  header .nav-icon,
+  header .nav-other {
+    display: none;
+  }
+
+  /* HERO make change acording to design */
+
+  /* TECH SECTION */
+  .tech-s .inner-scroller img {
+    height: 12rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --mobile-side-spacing: calc((100vw - 900px) * 0.5);
+  }
+
+  /* SKILS */
+  .skills-s .container {
+    flex-direction: row;
+    align-items: start;
+    gap: 3rem;
+  }
+}
 
 /* MOBILE NAV BUG: when screen is square it moves nav to view */
 /* MOBILE NAV BUG2: NAV is on top of header (header has context and NAV is part of it) */
