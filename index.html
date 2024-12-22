@@ -156,8 +156,42 @@
       <div class="projects-container flex-column-center">
       </div>
     </main>
-    <!-- <main class="contacts-s"></main>
-    <footer></footer> -->
+    <main class="contacts-s flex-column-center">
+      <h1 class="h-primary">KONTAKTAI</h1>
+      <form class="flex-column-center" action="https://formsubmit.co/yourEmailAddress" method="POST">
+        <label for="name">Vardas:</label>
+        <input type="text" id="name" name="name" required placeholder="Vardenis" />
+    
+        <label for="email">El. paštas:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="vardenis@pastas.lt"
+        />
+    
+        <label for="message">Žinutė:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Jūsų žinutė..."
+        ></textarea>
+    
+        <!-- ADDITIONAL -->
+        <input type="hidden" name="_subject" value="message from contacts page" />
+        <input type="text" name="_honey" style="display: none" />
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Ačiū už jūsų žinutę, susisieksime su jumis, kaip įmanoma greičiau!"
+        />
+        <button type="submit">SIŲSTI</button>
+      </form>
+    </main>
+    <!-- <footer></footer> -->
     <script src="script.js" defer></script>
   </body>
 </html>
