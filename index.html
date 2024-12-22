@@ -157,28 +157,50 @@
       </div>
     </main>
     <main class="contacts-s flex-column-center">
+      <div class="contacts-circle-el"></div>
       <h1 class="h-primary">KONTAKTAI</h1>
+      <div class="contacts-container flex-column-center">
+        <a href="tel:+37069445446"><i class="fa-solid fa-phone"></i> +37069445446</a>
+        <a href="mailto:pauliusmarkunas@gmail.com"><i class="fa-solid fa-envelope"></i> pauliusmarkunas@gmail.com</a>
+        <div class="social-links flex-row-center">
+          <a aria-label="nuoroda į linked In" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a aria-label="nuoroda į github" href="https://github.com/pauliusmarkunas">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a aria-label="nuoroda į facebook" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a aria-label="nuoroda į instagram" href="https://www.instagram.com/pauliusmarkunas/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
       <form class="flex-column-center" action="https://formsubmit.co/yourEmailAddress" method="POST">
-        <label for="name">Vardas:</label>
-        <input type="text" id="name" name="name" required placeholder="Vardenis" />
-    
-        <label for="email">El. paštas:</label>
-        <input
+        <div class="input-box">
+          <input type="text" id="name" name="name" required placeholder=""/>
+          <label for="name">Vardas:</label>
+        </div>
+        <div class="input-box">
+          <input
           type="email"
           id="email"
           name="email"
-          required
-          placeholder="vardenis@pastas.lt"
-        />
-    
-        <label for="message">Žinutė:</label>
-        <textarea
+          required placeholder=""
+          />
+          <label for="email">El. paštas:</label>
+        </div>
+        <div class="input-box">
+          <textarea
           id="message"
           name="message"
           rows="5"
-          required
-          placeholder="Jūsų žinutė..."
-        ></textarea>
+          required placeholder=""
+          ></textarea>
+          <label class="focus" for="message">Žinutė:</label>
+        </div>
+    
     
         <!-- ADDITIONAL -->
         <input type="hidden" name="_subject" value="message from contacts page" />
@@ -191,7 +213,33 @@
         <button type="submit">SIŲSTI</button>
       </form>
     </main>
-    <!-- <footer></footer> -->
+    <footer>
+      <a href="#" class="go-to-top flex-column-center">
+        <i class="fa-solid fa-caret-up"></i>
+        <h1>EITI Į VIRŠŲ</h1>
+      </a>
+      <ul class="flex-column-center">
+        <li><a href="#">Apie mane</a></li>
+        <li><a href="#">Įgūdžiai</a></li>
+        <li><a href="#">Projektai</a></li>
+        <li><a href="#">Susisiekite</a></li>
+      </ul>
+      <div class="social-links">
+        <a aria-label="nuoroda į linked In" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a aria-label="nuoroda į github" href="https://github.com/pauliusmarkunas">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a aria-label="nuoroda į facebook" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a aria-label="nuoroda į instagram" href="https://www.instagram.com/pauliusmarkunas/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <p class="copyright">&copy;2024 Paulius Markūnas, visos teisės saugomos</p>
+    </footer>
     <script src="script.js" defer></script>
   </body>
 </html>

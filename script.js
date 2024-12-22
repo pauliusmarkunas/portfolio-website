@@ -21,33 +21,37 @@ function scrollAnimation() {
   scrollers.forEach((e) => e.setAttribute("data-animated", true));
 }
 
-// DROPDOWN MENU PROJECTS
-const dropdownButton = document.getElementById("dropdownButton");
-const dropdownMenu = document.getElementById("dropdownMenu");
+// PROJECTS LOAD LOGIC STARTS HERE
+
+// PROJECTS SECTION SELECTORS
+const dropdownBtn = document.getElementById("dropdownButton");
+const dropdownBtnIcon = document.querySelector("#dropdownButton i");
+const dropDownMenu = document.getElementById("dropdownMenu");
+const dropDownBtnText = document.querySelector("#dropdownButton div");
+const projectsContainer = document.querySelector(".projects-container");
 
 // Toggle the dropdown menu visibility on button click
-dropdownButton.addEventListener("click", () => {
-  const isVisible = dropdownMenu.style.display === "block";
-  dropdownMenu.style.display = isVisible ? "none" : "block";
+dropdownBtn.addEventListener("click", () => {
+  const isVisible = dropDownMenu.style.display === "flex";
+  if (isVisible) {
+    dropDownMenu.style.display = "none";
+    dropdownBtnIcon.classList.remove("active");
+  } else {
+    dropDownMenu.style.display = "flex";
+    dropdownBtnIcon.classList.add("active");
+  }
 });
 
 // Close the dropdown menu if clicked outside
 document.addEventListener("click", (event) => {
   if (
-    !dropdownButton.contains(event.target) &&
-    !dropdownMenu.contains(event.target)
+    !dropdownBtn.contains(event.target) &&
+    !dropDownMenu.contains(event.target)
   ) {
-    dropdownMenu.style.display = "none";
+    dropDownMenu.style.display = "none";
+    dropdownBtnIcon.classList.remove("active");
   }
 });
-
-// PROJECTS LOAD LOGIC STARTS HERE
-
-// SELECTORS
-const dropDownMenu = document.querySelector("#dropdownMenu");
-const dropDownBtn = document.querySelector("#dropdownButton");
-const dropDownBtnText = document.querySelector("#dropdownButton div");
-const projectsContainer = document.querySelector(".projects-container");
 
 const categories = [
   "Visi projektai",
@@ -118,10 +122,13 @@ dropDownMenu.addEventListener("click", (e) => {
     activeCategory = e.target.textContent;
     LoadProjects();
     loadDropDownMenu();
+    dropdownBtnIcon.classList.remove("active");
   }
 });
 
 // PROJECTS LOAD LOGIC ENDS HERE
+
+// FORM LOGIC STARTS HERE
 
 // class Project {
 //   constructor({ category, imgSrc, title, text, isGitHub }) {
