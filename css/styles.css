@@ -314,6 +314,13 @@ header .nav-icon {
   filter: blur(1px);
 }
 
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #1717175a;
+  z-index: -1;
+}
+
 /* dropdown */
 .dropdown {
   display: inline-block;
@@ -347,6 +354,7 @@ header .nav-icon {
 .projects-container {
   padding-block: var(--mobile-side-spacing);
   padding-block: 6rem;
+  gap: 3rem;
 }
 
 .project-box {

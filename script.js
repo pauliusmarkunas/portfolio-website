@@ -40,3 +40,91 @@ document.addEventListener("click", (event) => {
     dropdownMenu.style.display = "none";
   }
 });
+
+// PROJECTS LOAD LOGIC STARTS HERE
+
+// SELECTORS
+const dropDownMenu = document.querySelector("#dropdownMenu");
+const dropDownBtn = document.querySelector("#dropdownButton");
+const dropDownBtnText = document.querySelector("#dropdownButton div");
+const projectsContainer = document.querySelector(".projects-container");
+
+const categories = [
+  "Visi projektai",
+  "Internetinės svetainės",
+  "JavaScript",
+  "HTML ir CSS",
+  "Wordpress",
+];
+
+let activeCategory = categories[0];
+
+const loadDropDownMenu = () => {
+  dropDownMenu.innerHTML = "";
+  categories.forEach((e) => {
+    if (e === activeCategory) dropDownBtnText.textContent = activeCategory;
+    else {
+      const li = document.createElement("li");
+      li.textContent = e;
+      dropDownMenu.append(li);
+    }
+  });
+};
+
+const LoadProject = (project) => {
+  fetch("html_templates/project-template.html")
+    .then((response) => response.text())
+    .then((template) => {
+      const parser = new DOMParser();
+      const HTMLTemplate = parser.parseFromString(template, "text/html");
+
+      HTMLTemplate.querySelector(".project-img").src = project.imgSrc;
+      HTMLTemplate.querySelector(".project-title").textContent = project.title;
+      HTMLTemplate.querySelector(".project-text").textContent = project.text;
+      HTMLTemplate.querySelector(".site-btn").href = project.siteLink;
+
+      if (project.gitHubLink) {
+        HTMLTemplate.querySelector(".git-btn").href = project.gitHubLink;
+      } else {
+        HTMLTemplate.querySelector(".git-btn").classList.add("remove-el");
+      }
+
+      projectsContainer.append(HTMLTemplate.querySelector(".project-box"));
+    });
+};
+
+const LoadProjects = () => {
+  projectsContainer.innerHTML = "";
+  fetch("project-data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const filteredProjects = data.filter((project) =>
+        project.category.includes(activeCategory)
+      );
+
+      filteredProjects.forEach((project) => {
+        LoadProject(project);
+      });
+    });
+};
+
+// INITIAL
+loadDropDownMenu();
+LoadProjects();
+
+// EVENT LISTENERS
+dropDownMenu.addEventListener("click", (e) => {
+  if (e.target !== dropDownMenu) {
+    activeCategory = e.target.textContent;
+    LoadProjects();
+    loadDropDownMenu();
+  }
+});
+
+// PROJECTS LOAD LOGIC ENDS HERE
+
+// class Project {
+//   constructor({ category, imgSrc, title, text, isGitHub }) {
+//     Object.assign(this, { category, imgSrc, title, text, isGitHub });
+//   }
+// }
