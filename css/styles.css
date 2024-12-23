@@ -146,7 +146,7 @@ header .nav-icon {
 }
 
 .hero-s img {
-  height: calc(100vh - var(--header-height));
+  height: calc(110vh - var(--header-height));
   position: absolute;
   bottom: 0;
   z-index: -10;
@@ -629,7 +629,47 @@ footer > p {
   }
 
   /* HERO make change acording to design */
+  .hero-s {
+    flex-direction: row;
+    color: var(--black);
+  }
 
+  .hero-s .main-text-box {
+    z-index: 10;
+  }
+
+  .hero-s img {
+    position: static;
+    display: inline-block;
+    z-index: 999;
+  }
+
+  .hero-s .overlay {
+    background-color: var(--white-bg);
+    left: -10%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    width: initial;
+    height: 1000px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-s .scroller {
+    width: 50%;
+  }
+
+  .hero-s .links-container {
+    margin-top: 6rem;
+  }
+
+  .hero-s .links-container {
+    width: auto;
+    flex-direction: column;
+    gap: 2.4rem;
+    .social-links a {
+      color: var(--black);
+    }
+  }
   /* TECH SECTION */
   .tech-s .inner-scroller img {
     height: 12rem;
@@ -649,6 +689,6 @@ footer > p {
   }
 }
 
-/* MOBILE NAV BUG: when screen is square it moves nav to view */
+/* MOBILE NAV BUG: when screen is square it moves nav to view (POSIBLE SOLUTION: CREATE PARENT CONTAINER, make overflow of container: hidden)*/
 /* MOBILE NAV BUG2: NAV is on top of header (header has context and NAV is part of it) */
 /* also scroll up first so if user clicks on hamburger lower then then top page*/
