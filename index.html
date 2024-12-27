@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Paulius Markūnas portfolio website showcasing skills, projects, and services. Specializing in web development and design.">
     <title>Paulius Markunas portfolio</title>
 
     <link
@@ -34,35 +35,37 @@
   </head>
   <body>
     <header class="flex-row-between">
-      <a href="#"
+      <a class="logo-link" href="#"
         ><img class="logo" src="assets/logo.webp" alt="web developer logo"
       /></a>
-      <nav class="flex-column-start">
-        <ul class="flex-column-center">
-          <li><a href="#about-me-s">Apie mane</a></li>
-          <li><a href="#skills-s">Įgūdžiai</a></li>
-          <li><a href="#projects-s">Projektai</a></li>
-          <li><a href="#contacts-s">Susisiekite</a></li>
-        </ul>
-        <div class="nav-other flex-column-end">
-          <p>Sveiki, esu Paulius</p>
-          <p>WEB PROGRAMUOTOJAS</p>
-          <img src="assets/separatorWhite 3.png" alt="separator" />
-          <div class="social-links flex-row-center">
-            <a aria-label="nuoroda į linked In" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a aria-label="nuoroda į github" href="https://github.com/pauliusmarkunas">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a aria-label="nuoroda į facebook" href="https://www.facebook.com/paulius.markunas/">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a aria-label="nuoroda į instagram" href="https://www.instagram.com/pauliusmarkunas/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
-      </nav>
+      <div class="nav-container">
+
+        <nav class="flex-column-start">
+          <ul class="flex-column-center">
+            <li><a href="#about-me-s">Apie mane</a></li>
+            <li><a href="#skills-s">Įgūdžiai</a></li>
+            <li><a href="#projects-s">Projektai</a></li>
+            <li><a href="#contacts-s">Susisiekite</a></li>
+          </ul>
+          <div class="nav-other flex-column-end">
+            <p>Sveiki, esu Paulius</p>
+            <p>WEB PROGRAMUOTOJAS</p>
+            <img src="assets/separatorWhite 3.png" alt="separator" />
+            <div class="social-links flex-row-center">
+              <a aria-label="nuoroda į linked In" role="link" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a aria-label="nuoroda į github" role="link" href="https://github.com/pauliusmarkunas">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a aria-label="nuoroda į facebook" role="link" href="https://www.facebook.com/paulius.markunas/">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a aria-label="nuoroda į instagram" role="link" href="https://www.instagram.com/pauliusmarkunas/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+        </nav>
       </div>
       <i class="fa-solid fa-bars nav-icon"></i>
     </header>
@@ -82,7 +85,7 @@
             </div>
           </div>
           <div class="links-container flex-row-between">
-            <a class="cta-btn" href="#">SUSISIEKTI</a>
+            <a class="cta-btn" href="#contacts-s">SUSISIEKTI</a>
             <div class="social-links flex-row-center">
               <a href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
                 <i class="fa-brands fa-linkedin"></i>
@@ -94,7 +97,7 @@
           </div>
         </div>
       </div>  
-      <img src="assets/profile.png" alt="profilio nuotrauka">
+      <img src="assets/profile.png" alt="profilio nuotrauka" loading="lazy"/>
     </main>
     <section id="about-me-s" class="about-me-s flex-column-center">
       <h1 class="h-primary">SUSIPAŽINKIME</h1>
@@ -126,26 +129,75 @@
       <h1 class="h-primary">TECHNOLOGIJOS</h1>
       <div class="scroller">
         <div class="inner-scroller">
-          <img src="assets/tech//html-1.svg" alt="">
-          <img src="assets/tech/css-3.svg" alt="">
-          <img src="assets/tech/sass-1.svg" alt="">
-          <img src="assets/tech/bootstrap-5-1.svg" alt="">
-          <img src="assets/tech/logo-javascript.svg" alt="">
-          <img src="assets/tech/git-bash.svg" alt="">
-          <img src="assets/tech/wordpress-icon-1.svg" alt="">
-          <img src="assets/tech/figma-icon.svg" alt="">
-          <img src="assets/tech//html-1.svg" alt="">
-          <img src="assets/tech/css-3.svg" alt="">
-          <img src="assets/tech/sass-1.svg" alt="">
-          <img src="assets/tech/bootstrap-5-1.svg" alt="">
-          <img src="assets/tech/logo-javascript.svg" alt="">
-          <img src="assets/tech/git-bash.svg" alt="">
-          <img src="assets/tech/wordpress-icon-1.svg" alt="">
-          <img src="assets/tech/figma-icon.svg" alt="">
+          <div class="tech-container">
+            <img src="assets/tech//html-1.svg" alt="HTML logotipas" loading="lazy" />
+            <h2>HTML</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/css-3.svg" alt="CSS logotipas" loading="lazy" />
+            <h2>CSS</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/sass-1.svg" alt="SASS logotipas" loading="lazy" />
+            <h2>SASS</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/bootstrap-5-1.svg" alt="Bootstrap logotipas" loading="lazy" />
+            <h2>Bootstrap</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/logo-javascript.svg" alt="JavaScript logotipas" loading="lazy" />
+            <h2>JavaScript</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/git-bash.svg" alt="Git Bash logotipas" loading="lazy" />
+            <h2>Git Bash</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/wordpress-icon-1.svg" alt="WordPress logotipas" loading="lazy" />
+            <h2>WordPress</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/figma-icon.svg" alt="Figma logotipas" loading="lazy" />
+            <h2>Figma</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech//html-1.svg" alt="HTML logotipas" loading="lazy" />
+            <h2>HTML</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/css-3.svg" alt="CSS logotipas" loading="lazy" />
+            <h2>CSS</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/sass-1.svg" alt="SASS logotipas" loading="lazy" />
+            <h2>SASS</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/bootstrap-5-1.svg" alt="Bootstrap logotipas" loading="lazy" />
+            <h2>Bootstrap</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/logo-javascript.svg" alt="JavaScript logotipas" loading="lazy" />
+            <h2>JavaScript</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/git-bash.svg" alt="Git Bash logotipas" loading="lazy" />
+            <h2>Git Bash</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/wordpress-icon-1.svg" alt="WordPress logotipas" loading="lazy" />
+            <h2>WordPress</h2>
+        </div>
+        <div class="tech-container">
+            <img src="assets/tech/figma-icon.svg" alt="Figma logotipas" loading="lazy" />
+            <h2>Figma</h2>
+        </div>
+        
         </div>
       </div>
     </section>
-    <main id="projects-s" class="projects-s grid-one-col">
+    <main id="projects-s" class="projects-s flex-column-center">
       <div class="bg-img"></div>
       <div class="bg-overlay"></div>
       <h1 class="h-primary">PROJEKTAI</h1>
@@ -157,7 +209,7 @@
         <ul class="dropdown-menu flex-column-start" id="dropdownMenu">
         </ul>
       </div>
-      <div class="projects-container flex-column-center">
+      <div class="projects-container grid-one-col">
       </div>
     </main>
     <main id="contacts-s" class="contacts-s flex-column-center">
@@ -167,16 +219,16 @@
         <a href="tel:+37069445446"><i class="fa-solid fa-phone"></i> +37069445446</a>
         <a href="mailto:pauliusmarkunas@gmail.com"><i class="fa-solid fa-envelope"></i> pauliusmarkunas@gmail.com</a>
         <div class="social-links flex-row-center">
-          <a aria-label="nuoroda į linked In" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
+          <a aria-label="nuoroda į linked In" role="link" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a aria-label="nuoroda į github" href="https://github.com/pauliusmarkunas">
+          <a aria-label="nuoroda į github" role="link" href="https://github.com/pauliusmarkunas">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a aria-label="nuoroda į facebook" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
+          <a aria-label="nuoroda į facebook" role="link" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a aria-label="nuoroda į instagram" href="https://www.instagram.com/pauliusmarkunas/">
+          <a aria-label="nuoroda į instagram" role="link" href="https://www.instagram.com/pauliusmarkunas/">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -229,16 +281,16 @@
           <li><a href="#contacts-s">Susisiekite</a></li>
       </ul>
       <div class="social-links">
-        <a aria-label="nuoroda į linked In" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
+        <a aria-label="nuoroda į linked In" role="link" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a aria-label="nuoroda į github" href="https://github.com/pauliusmarkunas">
+        <a aria-label="nuoroda į github" role="link" href="https://github.com/pauliusmarkunas">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a aria-label="nuoroda į facebook" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
+        <a aria-label="nuoroda į facebook" role="link" href="https://www.facebook.com/paulius.markunas/" rel="noopener noreferrer">
           <i class="fa-brands fa-facebook"></i>
         </a>
-        <a aria-label="nuoroda į instagram" href="https://www.instagram.com/pauliusmarkunas/">
+        <a aria-label="nuoroda į instagram" role="link" href="https://www.instagram.com/pauliusmarkunas/">
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>

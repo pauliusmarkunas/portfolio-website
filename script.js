@@ -12,12 +12,18 @@ hamburgerBtn.addEventListener("click", (e) => {
 });
 
 navLinks.addEventListener("click", (e) => {
-  if (e.target !== navLinks) {
+  if (e.target !== navLinks && window.innerWidth < 768) {
     document.body.classList.remove("no-scroll");
     hamburgerBtn.classList.toggle("fa-bars");
     hamburgerBtn.classList.toggle("fa-xmark");
     navSection.classList.toggle("active");
   }
+});
+
+// responsive NAV height
+document.addEventListener("DOMContentLoaded", () => {
+  const navOther = document.querySelector(".nav-other");
+  if (window.innerHeight < 630) navOther.classList.add("remove-el");
 });
 
 // SCROLLER
@@ -76,7 +82,8 @@ let activeCategory = categories[0];
 const loadDropDownMenu = () => {
   dropDownMenu.innerHTML = "";
   categories.forEach((e) => {
-    if (e === activeCategory) dropDownBtnText.textContent = activeCategory;
+    if (e === activeCategory)
+      dropDownBtnText.textContent = activeCategory.toLocaleUpperCase();
     else {
       const li = document.createElement("li");
       li.textContent = e;

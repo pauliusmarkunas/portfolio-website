@@ -40,8 +40,6 @@ header {
   background-color: var(--grey1);
   height: var(--header-height);
   padding-inline: var(--mobile-side-spacing);
-  position: relative;
-  z-index: 2;
 }
 
 header a {
@@ -54,20 +52,38 @@ header .logo {
   transform: scale(1.5);
 }
 
-header nav {
+header .logo-link {
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(0);
+}
+
+header .logo-link:hover {
+  transform: rotateY(180deg);
+}
+
+header .nav-container {
   position: absolute;
-  top: 100%;
+  top: var(--header-height);
   left: 0;
   width: 100%;
-  bottom: calc(-100vh + var(--header-height));
+  bottom: 0;
+  overflow: hidden;
+}
+
+header nav {
+  position: absolute;
+  bottom: calc(100vh - var(--header-height));
+  left: 0;
+  width: 100%;
+  top: calc(-100vh + var(--header-height));
   padding-top: 4.2rem;
-  transform: translateY(calc(-100% - var(--header-height)));
   transition: transform 0.5s ease-in-out;
   background-color: #171717;
+  z-index: 10;
 }
 
 header nav.active {
-  transform: translateY(0);
+  transform: translateY(100%);
 }
 
 header nav ul {
@@ -311,6 +327,13 @@ header .nav-icon {
   animation-play-state: paused;
 }
 
+.tech-s .scroller[data-animated="true"] h2 {
+  color: var(--black);
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
 /* PROJECTS-SECTION */
 .projects-s {
   padding: 6rem var(--mobile-side-spacing);
@@ -350,6 +373,16 @@ header .nav-icon {
   background-color: rgba(0, 0, 0, 0.587);
   font-size: 3rem;
   padding: 0.8rem 1.8rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-toggle div {
+  font-weight: var(--bold);
+}
+
+.dropdown-toggle:hover {
+  cursor: pointer;
+  background-color: black;
 }
 
 .dropdown-toggle i {
@@ -371,6 +404,12 @@ header .nav-icon {
   font-size: 2.4rem;
   padding: 0.8rem 1.8rem;
   color: rgb(139, 139, 139);
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+  cursor: pointer;
+  color: white;
 }
 
 /* websites container*/
@@ -601,6 +640,10 @@ footer > p {
     --mobile-side-spacing: calc((100vw - 700px) * 0.5);
   }
 
+  .h-primary {
+    margin-bottom: 9rem;
+  }
+
   /* HEADER */
   header {
     justify-content: space-between;
@@ -613,6 +656,11 @@ footer > p {
     background-color: transparent;
     width: auto;
   }
+
+  header .nav-container {
+    position: static;
+  }
+
   header nav ul {
     flex-direction: row !important;
     gap: 2.4remrem;
@@ -632,30 +680,36 @@ footer > p {
   .hero-s {
     flex-direction: row;
     color: var(--black);
+    padding-inline: var(--mobile-side-spacing);
+    justify-content: space-between;
   }
 
   .hero-s .main-text-box {
-    z-index: 10;
+    width: 50%;
+    align-items: center;
+    .container {
+      padding: 0;
+    }
   }
 
   .hero-s img {
     position: static;
     display: inline-block;
-    z-index: 999;
+    height: 100%;
   }
 
   .hero-s .overlay {
     background-color: var(--white-bg);
-    left: -10%;
+    left: -10vw;
     top: 50%;
-    transform: translate(-50%, -50%) rotate(15deg);
-    width: initial;
-    height: 1000px;
+    width: 110vw;
+    height: 110vw;
     aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%) rotate(15deg);
   }
 
   .hero-s .scroller {
-    width: 50%;
+    width: 70%;
   }
 
   .hero-s .links-container {
@@ -674,11 +728,37 @@ footer > p {
   .tech-s .inner-scroller img {
     height: 12rem;
   }
+
+  .tech-s .scroller[data-animated="true"] h2 {
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+  }
+
+  /* PROJECTS */
+  .projects-s .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: stretch;
+    align-items: stretch;
+    /* ALIgn BUTTONS AND OTHER ELEMENTS for same lever represenation */
+  }
+
+  .projects-s .projects-container .project-box {
+    justify-content: space-between;
+    img {
+      aspect-ratio: 16 / 8;
+    }
+    p {
+      height: 12rem;
+    }
+    .project-title {
+      height: 6rem;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
   :root {
-    --mobile-side-spacing: calc((100vw - 900px) * 0.5);
+    --mobile-side-spacing: calc((100vw - 700px) * 0.5);
   }
 
   /* SKILS */
@@ -687,8 +767,34 @@ footer > p {
     align-items: start;
     gap: 3rem;
   }
+
+  /* TECH */
+  .tech-s .inner-scroller img {
+    height: 25vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --mobile-side-spacing: calc((100vw - 1000px) * 0.5);
+  }
+
+  /* SKILS */
+  .skills-s .container {
+    flex-direction: row;
+    align-items: start;
+    gap: 3rem;
+  }
+
+  /* TECH */
+  .tech-s .inner-scroller img {
+    height: 25vh;
+  }
 }
 
 /* MOBILE NAV BUG: when screen is square it moves nav to view (POSIBLE SOLUTION: CREATE PARENT CONTAINER, make overflow of container: hidden)*/
-/* MOBILE NAV BUG2: NAV is on top of header (header has context and NAV is part of it) */
 /* also scroll up first so if user clicks on hamburger lower then then top page*/
+
+/* ADD filter icon to better recognition */
+
+/* TO FIX mobile nav make hwight responsive. Issue: children element keep static height and goes aout of parent el */
