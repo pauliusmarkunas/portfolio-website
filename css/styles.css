@@ -1,39 +1,5 @@
 @import url("general.css");
 
-:root {
-  /* COLORS */
-  --black: #171717;
-  --grey1: #242424;
-  --back-opacity10: hsla(0, 0%, 9%, 0.903);
-  --white-bg: rgb(238, 238, 238);
-  --blue: rgba(0, 89, 255, 0.589);
-
-  /* SPACING */
-  --section-width: 122px;
-  --mobile-side-spacing: 1.8rem;
-
-  /* FONTS */
-  --h-family: "Montserrat", serif;
-  --p-family: "Open Sans", serif;
-
-  /* FONT SIZES */
-  --p-size: 1.8rem;
-
-  /* FONT WEIGHTS */
-  --bold: 700;
-  --regular: 500;
-  --light: 300;
-
-  /* SCREEN WIDTHS */
-  --s-mobile: 320px;
-  --m-mobile: 375px;
-  --s-desktop: 1024px;
-  --l-desktop: 1440px;
-
-  /* OTHER */
-  --header-height: 75px;
-}
-
 /* BASE 375 px */
 /* HEADER */
 header {
@@ -42,9 +8,10 @@ header {
   padding-inline: var(--mobile-side-spacing);
 }
 
-header a {
+header > a {
   overflow: hidden;
   border-radius: 0.8rem;
+  aspect-ratio: 1 / 1;
 }
 
 header .logo {
@@ -96,11 +63,14 @@ header nav ul li {
   padding: 0.8rem 0;
 }
 
-header nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.615);
+header nav a {
+  transition: var(--transition-color-ease), var(--transition-bg-ease);
+  font-size: 3rem;
+  width: 100%;
 }
 
 header nav ul li:hover a {
+  background-color: rgba(255, 255, 255, 0.615);
   color: #171717;
 }
 
@@ -110,10 +80,6 @@ header nav ul li:last-child {
 
 header nav ul li:last-child a {
   color: #171717;
-}
-
-header nav a {
-  font-size: 3rem;
 }
 
 header .nav-icon {
@@ -243,11 +209,28 @@ header .nav-icon {
   font-size: 1.8rem;
   background-color: #171717;
   padding: 0.8rem 1.8rem;
+  transition: var(--transition-transform-ease), box-shadow 0.3s ease-in-out;
+}
+
+.hero-s .cta-btn:hover {
+  transform: scale(110%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .hero-s .social-links {
   font-size: 2.6rem;
   gap: 2.4rem;
+}
+
+.hero-s .social-links i {
+  transition: var(--transition-transform-ease), text-shadow 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.hero-s .social-links i:hover {
+  transform: scale(110%);
+  text-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
 }
 
 /* ABOUT ME */
@@ -373,7 +356,7 @@ header .nav-icon {
   background-color: rgba(0, 0, 0, 0.587);
   font-size: 3rem;
   padding: 0.8rem 1.8rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--transition-bg-ease);
 }
 
 .dropdown-toggle div {
@@ -387,7 +370,7 @@ header .nav-icon {
 
 .dropdown-toggle i {
   transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition-transform-ease);
 }
 
 .dropdown-toggle i.active {
@@ -404,7 +387,7 @@ header .nav-icon {
   font-size: 2.4rem;
   padding: 0.8rem 1.8rem;
   color: rgb(139, 139, 139);
-  transition: color 0.3s ease-in-out;
+  transition: var(--transition-color-ease);
 }
 
 .dropdown-menu li:hover {
@@ -573,6 +556,12 @@ header .nav-icon {
   color: var(--white-bg);
   font-family: var(--h-family);
   font-size: 2.4rem;
+  transition: var(--transition-bg-ease);
+}
+
+.contacts-s form button:hover {
+  cursor: pointer;
+  background-color: var(--blue-dark);
 }
 
 footer {
@@ -624,6 +613,12 @@ footer .social-links {
 footer .social-links i {
   font-size: 6rem;
   aspect-ratio: 1/1;
+  transition: var(--transition-color-ease), var(--transition-transform-ease);
+}
+
+footer .social-links i:hover {
+  color: var(--white-bg);
+  transform: scale(110%);
 }
 
 footer > p {
@@ -663,7 +658,7 @@ footer > p {
 
   header nav ul {
     flex-direction: row !important;
-    gap: 2.4remrem;
+    gap: 2.4rem;
     a {
       font-size: 1.8rem;
       white-space: nowrap;
@@ -710,6 +705,15 @@ footer > p {
 
   .hero-s .scroller {
     width: 70%;
+    transition: var(--transition-color-ease), var(--transition-bg-ease),
+      var(--transition-transform-ease);
+  }
+
+  .hero-s .scroller:hover {
+    cursor: pointer;
+    color: var(--white-bg);
+    background-color: var(--black);
+    transform: scale(120%);
   }
 
   .hero-s .links-container {
@@ -727,6 +731,10 @@ footer > p {
   /* TECH SECTION */
   .tech-s .inner-scroller img {
     height: 12rem;
+  }
+
+  .tech-s .inner-scroller:hover {
+    cursor: pointer;
   }
 
   .tech-s .scroller[data-animated="true"] h2 {
@@ -792,9 +800,11 @@ footer > p {
   }
 }
 
-/* MOBILE NAV BUG: when screen is square it moves nav to view (POSIBLE SOLUTION: CREATE PARENT CONTAINER, make overflow of container: hidden)*/
+/* BACKLOG */
 /* also scroll up first so if user clicks on hamburger lower then then top page*/
-
 /* ADD filter icon to better recognition */
+/* Add hover effects for all interactive elements */
 
+/* COMPLETED */
+/* MOBILE NAV BUG: when screen is square it moves nav to view (POSIBLE SOLUTION: CREATE PARENT CONTAINER, make overflow of container: hidden)*/
 /* TO FIX mobile nav make hwight responsive. Issue: children element keep static height and goes aout of parent el */

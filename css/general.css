@@ -4,6 +4,8 @@
   --grey1: #242424;
   --back-opacity10: hsla(0, 0%, 9%, 0.903);
   --white-bg: rgb(238, 238, 238);
+  --blue: rgba(0, 89, 255, 0.589);
+  --blue-dark: rgb(0, 52, 148);
 
   /* SPACING */
   --section-width: 122px;
@@ -29,6 +31,9 @@
 
   /* OTHER */
   --header-height: 75px;
+  --transition-bg-ease: background-color 0.3s ease-in-out;
+  --transition-color-ease: color 0.3s ease-in-out;
+  --transition-transform-ease: transform 0.3s ease-in-out;
 }
 
 /* GENERAL */

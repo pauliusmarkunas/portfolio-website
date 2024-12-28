@@ -114,6 +114,12 @@ const LoadProject = (project) => {
     });
 };
 
+const encodeEmail = () => {
+  const form = document.querySelector("form");
+  const encodedEmail = atob("cGF1bGl1c21hcmt1bmFzQGdtYWlsLmNvbQ==");
+  form.setAttribute("action", `https://formsubmit.co/${encodedEmail}`);
+};
+
 const LoadProjects = () => {
   projectsContainer.innerHTML = "";
   fetch("project-data.json")
@@ -141,6 +147,11 @@ dropDownMenu.addEventListener("click", (e) => {
     loadDropDownMenu();
     dropdownBtnIcon.classList.remove("active");
   }
+});
+
+// FORM email encoding
+document.addEventListener("DOMContentLoaded", () => {
+  encodeEmail();
 });
 
 // PROJECTS LOAD LOGIC ENDS HERE
