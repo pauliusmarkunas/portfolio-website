@@ -149,6 +149,17 @@ dropDownMenu.addEventListener("click", (e) => {
   }
 });
 
+// hero img hover fx
+const videoEl = document.querySelector(".hero-video");
+videoEl.addEventListener("mouseenter", () => {
+  videoEl.play();
+});
+
+videoEl.addEventListener("mouseleave", () => {
+  videoEl.pause();
+  videoEl.currentTime = 0;
+});
+
 // FORM email encoding
 document.addEventListener("DOMContentLoaded", () => {
   encodeEmail();

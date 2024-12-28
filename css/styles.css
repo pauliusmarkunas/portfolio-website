@@ -127,7 +127,7 @@ header .nav-icon {
   z-index: 1;
 }
 
-.hero-s img {
+.hero-s video {
   height: calc(110vh - var(--header-height));
   position: absolute;
   bottom: 0;
@@ -687,7 +687,7 @@ footer > p {
     }
   }
 
-  .hero-s img {
+  .hero-s video {
     position: static;
     display: inline-block;
     height: 100%;
