@@ -442,11 +442,24 @@ header .nav-icon {
 }
 
 .project-box .git-btn {
-  background-color: #e6db74;
+  background-color: var(--yellow);
+}
+
+.project-box .git-btn:hover {
+  background-color: var(--yellow-dark);
+}
+
+.project-box .git-btn,
+.project-box .site-btn {
+  transition: var(--transition-bg-ease);
 }
 
 .project-box .site-btn {
   background-color: #31a4e2;
+}
+
+.project-box .site-btn:hover {
+  background-color: #298cc1;
 }
 
 /* CONTACTS SECTION */
@@ -471,6 +484,14 @@ header .nav-icon {
   color: var(--blue);
   font-family: var(--h-family);
   font-size: 1.8rem;
+}
+
+.contacts-container a {
+  transition: var(--transition-color-ease);
+}
+
+.contacts-container a:hover {
+  color: var(--blue-dark);
 }
 
 .contacts-s .social-links {
@@ -573,7 +594,7 @@ footer {
   row-gap: 6rem;
 }
 
-footer .go-to-top {
+/* footer .go-to-top {
   grid-column: 1/3;
   text-align: center;
 }
@@ -584,9 +605,24 @@ footer .go-to-top h1 {
   padding-top: 1.2rem;
   border-top: solid 4px var(--white-bg);
   letter-spacing: 5px;
+} */
+
+.go-to-top {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  color: var(--blue);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.505);
+  border-radius: 1rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: top 0.5s ease-in-out;
+  animation: float 3s ease-in-out infinite;
 }
 
-footer .go-to-top i {
+.go-to-top i {
   font-size: 3rem;
 }
 
@@ -693,12 +729,16 @@ footer > p {
     height: 100%;
   }
 
+  .hero-s video:hover {
+    cursor: help;
+  }
+
   .hero-s .overlay {
     background-color: var(--white-bg);
     left: -10vw;
     top: 50%;
     width: 110vw;
-    height: 110vw;
+    height: 150vw;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%) rotate(15deg);
   }

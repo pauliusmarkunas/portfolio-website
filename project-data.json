@@ -3,7 +3,7 @@
     "category": ["Visi projektai", "Internetinės svetainės", "Wordpress"],
     "imgSrc": "assets/portfolio_websites/autena.png",
     "title": "Autodalių parduotuvės reprezentacinė svetainė",
-    "text": "Utenoje Esančios automobilių dalių parduotuvės reprezentacinė svetainė sukurta naudojant HTML, CSS, JavaScript ir WordPress technologijas",
+    "text": "Utenoje esančios automobilių dalių parduotuvės reprezentacinė svetainė, sukurta naudojant HTML, CSS, JavaScript ir WordPress technologijas",
     "gitHubLink": "https://github.com/pauliusmarkunas/Autena-Website",
     "siteLink": "https://autena.lt/"
   },
@@ -11,31 +11,31 @@
     "category": ["Visi projektai", "JavaScript"],
     "imgSrc": "assets/portfolio_websites/card-game.png",
     "title": "Kortų atminties žaidimas",
-    "text": "Darbinę atmintį lavinantis interaktyvus žaidimas su vis sunkėjančiais lygiais. Sukurta naudojant HTML, CSS ir JavaScript",
+    "text": "Darbinę atmintį lavinantis interaktyvus žaidimas su vis sunkėjančiais lygiais, sukurtas naudojant HTML, CSS ir JavaScript",
     "gitHubLink": "https://github.com/pauliusmarkunas/Card-Memory-Game",
     "siteLink": "https://pauliusmarkunas.github.io/Card-Memory-Game/"
   },
   {
     "category": ["Visi projektai", "HTML ir CSS", "Internetinės svetainės"],
     "imgSrc": "assets/portfolio_websites/nft-landing.png",
-    "title": "fntlanding pilnai prisitaikanti svetainė",
-    "text": "Projektas skirtas parodyti kursų metu igytas žinias apie HTML ir CSS technologijas",
+    "title": "Fntlanding pilnai prisitaikanti svetainė",
+    "text": "Projektas skirtas parodyti kursų metu įgytas žinias apie HTML ir CSS technologijas",
     "gitHubLink": "https://github.com/pauliusmarkunas/nftlanding-landing-page/settings/pages",
     "siteLink": "https://pauliusmarkunas.github.io/nftlanding-landing-page/"
   },
   {
     "category": ["Visi projektai", "JavaScript"],
     "imgSrc": "assets/portfolio_websites/pomodoro.png",
-    "title": "laiko valdymo programėlė",
-    "text": "Vienas pirmųjų mano JavaScript projektų parodantis galimybę dirbti su įvairiais medijų tipais. Projektas paremtas garsia \"pomodoro\" technika",
+    "title": "Laiko valdymo programėlė",
+    "text": "Vienas pirmųjų mano JavaScript projektų, parodantis, kaip dirbti su įvairiais medijų tipais. Projektas paremtas garsia „pomodoro“ technika",
     "gitHubLink": "https://github.com/pauliusmarkunas/Pomodoro",
     "siteLink": "https://pauliusmarkunas.github.io/Pomodoro/"
   },
   {
     "category": ["Visi projektai", "Internetinės svetainės", "HTML ir CSS"],
     "imgSrc": "assets/portfolio_websites/omnifood.png",
-    "title": "programėlės reprezentacinė svetainė",
-    "text": "Baigiamasis Udemy HTML ir CSS kursų projektas. Svetainė yra visiškai prisitaikanti prie ekranų dydžių",
+    "title": "Programėlės reprezentacinė svetainė",
+    "text": "Baigiamasis Udemy HTML ir CSS kursų projektas – svetainė yra visiškai prisitaikanti prie ekranų dydžių",
     "gitHubLink": "https://github.com/pauliusmarkunas/Omnifood",
     "siteLink": "https://pauliusmarkunas.github.io/Omnifood/"
   }

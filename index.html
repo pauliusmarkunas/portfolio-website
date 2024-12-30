@@ -35,7 +35,7 @@
   </head>
   <body>
     <header class="flex-row-between">
-      <a class="logo-link" href="#"
+      <a class="logo-link" href="#hero-s"
         ><img class="logo" src="assets/logo.webp" alt="web developer logo"
       /></a>
       <div class="nav-container">
@@ -69,7 +69,7 @@
       </div>
       <i class="fa-solid fa-bars nav-icon"></i>
     </header>
-    <main class="hero-s flex-column-end ">
+    <main id="hero-s" class="hero-s flex-column-end">
       <div class="overlay"></div>
       <div class="main-text-box">
         <div class="container flex-column-center">
@@ -103,13 +103,13 @@
         Your browser does not support the video tag.
       </video>
     </main>
-    <section id="about-me-s" class="about-me-s flex-column-center">
+    <section id="about-me-s" class="about-me-s flex-column-center observe">
       <h1 class="h-primary">SUSIPAŽINKIME</h1>
       <p>Esu Paulius Markūnas, Vilniaus universiteto Verslo informacinių sistemų ketvirto kurso studentas, jau kelis metus besidomintis ir tobulėjantis žiniatinklio technologijų (angl. WEB technologies) srityje. Specializuojuosi HTML, CSS, JavaScript ir WordPress platformose.</p>
       <p>Šiuo metu gilinu žinias „Front-End Soft and Artificial Intelligence“ programoje Code Academy, kurioje mokausi pažangių technologijų, tokių kaip React.js, Node.js ir Bootstrap. Mano portfolio rasite projektus, atspindinčius gebėjimą kurti vartotojui patrauklias ir funkcionalias aplikacijas bei svetaines.</p>
       <p>Turiu praktinės patirties dirbant su POS sistemomis, UI/UX dizainu naudojant Figma ir procesų žemėlapių kūrimu, siūlau unikalų techninių ir kūrybinių įgūdžių derinį, tinkantį įvairiems projektams.</p>
     </section>
-    <section id="skills-s" class="skills-s flex-column-center">
+    <section id="skills-s" class="skills-s flex-column-center observe">
       <h1 class="h-primary">KĄ JUMS SIŪLAU</h1>
       <div class="container flex-column-center">
         <div class="value-box">
@@ -129,7 +129,7 @@
         </div>
       </div>
     </section>
-    <section class="tech-s flex-column-center">
+    <section class="tech-s flex-column-center observe">
       <h1 class="h-primary">TECHNOLOGIJOS</h1>
       <div class="scroller">
         <div class="inner-scroller">
@@ -201,7 +201,7 @@
         </div>
       </div>
     </section>
-    <main id="projects-s" class="projects-s flex-column-center">
+    <main id="projects-s" class="projects-s flex-column-center observe">
       <div class="bg-img"></div>
       <div class="bg-overlay"></div>
       <h1 class="h-primary">PROJEKTAI</h1>
@@ -216,7 +216,7 @@
       <div class="projects-container grid-one-col">
       </div>
     </main>
-    <main id="contacts-s" class="contacts-s flex-column-center">
+    <main id="contacts-s" class="contacts-s flex-column-center observe">
       <div class="contacts-circle-el"></div>
       <h1 class="h-primary">KONTAKTAI</h1>
       <div class="contacts-container flex-column-center">
@@ -274,15 +274,11 @@
       </form>
     </main>
     <footer>
-      <a href="#" class="go-to-top flex-column-center">
-        <i class="fa-solid fa-caret-up"></i>
-        <h1>EITI Į VIRŠŲ</h1>
-      </a>
       <ul class="flex-column-center">
         <li><a href="#about-me-s">Apie mane</a></li>
-          <li><a href="#skills-s">Įgūdžiai</a></li>
-          <li><a href="#projects-s">Projektai</a></li>
-          <li><a href="#contacts-s">Susisiekite</a></li>
+        <li><a href="#skills-s">Įgūdžiai</a></li>
+        <li><a href="#projects-s">Projektai</a></li>
+        <li><a href="#contacts-s">Susisiekite</a></li>
       </ul>
       <div class="social-links">
         <a aria-label="nuoroda į linked In" role="link" href="https://www.linkedin.com/in/paulius-mark%C5%ABnas-85b338218/">
@@ -300,6 +296,10 @@
       </div>
       <p class="copyright">&copy;2024 Paulius Markūnas, visos teisės saugomos</p>
     </footer>
+    <a href="#" class="go-to-top flex-column-center">
+      <i class="fa-solid fa-caret-up"></i>
+      <h1>EITI Į VIRŠŲ</h1>
+    </a>
     <script src="script.js" defer></script>
   </body>
 </html>

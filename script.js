@@ -165,9 +165,60 @@ document.addEventListener("DOMContentLoaded", () => {
   encodeEmail();
 });
 
-// PROJECTS LOAD LOGIC ENDS HERE
+// INTERSECTION OBSERVER
+const sections = document.querySelectorAll(".observe");
+const upBtn = document.querySelector(".go-to-top");
 
-// FORM LOGIC STARTS HERE
+// Set up the IntersectionObserver
+let lastScrollY = window.scrollY; // Track the last scroll position
+
+// Function to determine the threshold based on scroll direction
+function getThreshold() {
+  return window.scrollY > lastScrollY ? 0.1 : 0.9; // Scrolling down: 0.1, scrolling up: 0.9
+}
+
+// Dynamically update observer options
+function createObserver() {
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    threshold: getThreshold(), // Dynamically set threshold based on scroll direction
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const section = entry.target;
+        const sectionRect = section.getBoundingClientRect();
+
+        // Move the button to the top of the visible section
+        upBtn.style.top = `${sectionRect.top + window.scrollY}px`;
+      }
+    });
+  }, observerOptions);
+
+  // Observe each section
+  sections.forEach((section) => observer.observe(section));
+  return observer;
+}
+
+// Create the observer
+let observer = createObserver();
+
+// Recreate the observer when scrolling
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  // Check if the scroll direction has changed
+  if (
+    (currentScrollY > lastScrollY && observer.threshold !== 0.1) || // Scroll down
+    (currentScrollY < lastScrollY && observer.threshold !== 0.9) // Scroll up
+  ) {
+    observer.disconnect(); // Disconnect the current observer
+    observer = createObserver(); // Recreate the observer with the new threshold
+  }
+
+  lastScrollY = currentScrollY; // Update last scroll position
+});
 
 // class Project {
 //   constructor({ category, imgSrc, title, text, isGitHub }) {

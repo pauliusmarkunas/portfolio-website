@@ -6,6 +6,8 @@
   --white-bg: rgb(238, 238, 238);
   --blue: rgba(0, 89, 255, 0.589);
   --blue-dark: rgb(0, 52, 148);
+  --yellow: #e6db74;
+  --yellow-dark: #d5c749;
 
   /* SPACING */
   --section-width: 122px;
@@ -223,5 +225,17 @@ body.no-scroll {
     transform: translateX(
       calc(-50% + 100vw + 1.5rem)
     ); /* End position: scroll to the left */
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%); /* Start at the original position */
+  }
+  50% {
+    transform: translate(-50%, -35%); /* Move up slightly */
+  }
+  100% {
+    transform: translate(-50%, -50%); /* Return to the original position */
   }
 }
