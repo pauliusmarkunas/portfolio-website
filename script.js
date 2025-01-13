@@ -151,11 +151,12 @@ dropDownMenu.addEventListener("click", (e) => {
 
 // hero img hover fx
 const videoEl = document.querySelector(".hero-video");
-videoEl.addEventListener("mouseenter", () => {
+const logoEl = document.querySelector(".logo-link");
+logoEl.addEventListener("mouseenter", () => {
   videoEl.play();
 });
 
-videoEl.addEventListener("mouseleave", () => {
+logoEl.addEventListener("mouseleave", () => {
   videoEl.pause();
   videoEl.currentTime = 0;
 });

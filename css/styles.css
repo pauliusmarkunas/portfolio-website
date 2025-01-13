@@ -611,15 +611,15 @@ footer .go-to-top h1 {
   position: absolute;
   top: 100vh;
   left: 50%;
-  color: var(--blue);
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.505);
-  border-radius: 1rem;
+  color: var(--black);
+  -webkit-text-stroke: 0.5px rgb(28, 238, 0);
   padding: 10px;
   border: none;
   cursor: pointer;
   z-index: 100;
   transition: top 0.5s ease-in-out;
   animation: float 3s ease-in-out infinite;
+  font-size: 1.2rem;
 }
 
 .go-to-top i {
@@ -727,10 +727,6 @@ footer > p {
     position: static;
     display: inline-block;
     height: 100%;
-  }
-
-  .hero-s video:hover {
-    cursor: help;
   }
 
   .hero-s .overlay {
