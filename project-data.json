@@ -38,13 +38,13 @@
     "text": "Baigiamasis Udemy HTML ir CSS kursų projektas – svetainė yra visiškai prisitaikanti prie ekranų dydžių",
     "gitHubLink": "https://github.com/pauliusmarkunas/Omnifood",
     "siteLink": "https://pauliusmarkunas.github.io/Omnifood/"
-  }
+  },
   {
     "category": ["Visi projektai", "Žaidimai", "Node js", "JavaScript"],
     "imgSrc": "assets/portfolio_websites/word-guess-game.png",
     "title": "'Atspėk žodį' žaidimas",
     "text": "Žodžių spėlionės žaidimas, sukurtas naudojant Node.js, OpenAI API, bootstrap CSS technologijas. AI generuoja žodžius ir aprašymus. Vieno žaidėjo ir dviejų žaidėjų režimai, sudėtingumo lygiai, strateginės 'galios', garso efektai suteikia žaidimui įdomumo",
-    "gitHubLink": "https://github.com/pauliusmarkunas/Omnifood",
-    "siteLink": "https://pauliusmarkunas.github.io/Omnifood/"
+    "gitHubLink": "https://github.com/pauliusmarkunas/Gues-Word-Game",
+    "siteLink": "https://pauliusmarkunas.github.io/Gues-Word-Game/"
   }
 ]
