@@ -75,6 +75,8 @@ const categories = [
   "JavaScript",
   "HTML ir CSS",
   "Wordpress",
+  "Node js",
+  "Žaidimai",
 ];
 
 let activeCategory = categories[0];

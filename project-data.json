@@ -8,7 +8,7 @@
     "siteLink": "https://autena.lt/"
   },
   {
-    "category": ["Visi projektai", "JavaScript"],
+    "category": ["Visi projektai", "JavaScript", "Žaidimai"],
     "imgSrc": "assets/portfolio_websites/card-game.png",
     "title": "Kortų atminties žaidimas",
     "text": "Darbinę atmintį lavinantis interaktyvus žaidimas su vis sunkėjančiais lygiais, sukurtas naudojant HTML, CSS ir JavaScript",
@@ -36,6 +36,14 @@
     "imgSrc": "assets/portfolio_websites/omnifood.png",
     "title": "Programėlės reprezentacinė svetainė",
     "text": "Baigiamasis Udemy HTML ir CSS kursų projektas – svetainė yra visiškai prisitaikanti prie ekranų dydžių",
+    "gitHubLink": "https://github.com/pauliusmarkunas/Omnifood",
+    "siteLink": "https://pauliusmarkunas.github.io/Omnifood/"
+  }
+  {
+    "category": ["Visi projektai", "Žaidimai", "Node js", "JavaScript"],
+    "imgSrc": "assets/portfolio_websites/word-guess-game.png",
+    "title": "'Atspėk žodį' žaidimas",
+    "text": "Žodžių spėlionės žaidimas, sukurtas naudojant Node.js, OpenAI API, bootstrap CSS technologijas. AI generuoja žodžius ir aprašymus. Vieno žaidėjo ir dviejų žaidėjų režimai, sudėtingumo lygiai, strateginės 'galios', garso efektai suteikia žaidimui įdomumo",
     "gitHubLink": "https://github.com/pauliusmarkunas/Omnifood",
     "siteLink": "https://pauliusmarkunas.github.io/Omnifood/"
   }
