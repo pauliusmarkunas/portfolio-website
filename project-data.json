@@ -1,11 +1,32 @@
 [
   {
+    "category": [
+      "Visi projektai",
+      "Node js",
+      "React js",
+      "Internetinės aplikacijos"
+    ],
+    "imgSrc": "assets/portfolio_websites/guest-flow.png",
+    "title": "GuestFlow - internetinė platforma",
+    "text": "Internetinė renginių dalyvių registracijos platforma. Sistema leidžia pridėti dalyvius į renginius, peržiūrėti ir tvarkyti registracijos sąrašus. Programavimui naudota React.js vartotojo sąsajai, Node.js serverio daliai ir PostgreSQL duomenų saugojimui.",
+    "gitHubLink": "https://github.com/pauliusmarkunas/events-frontend",
+    "siteLink": "https://guestflow.pauliusweb.lt/"
+  },
+  {
     "category": ["Visi projektai", "Internetinės svetainės", "Wordpress"],
     "imgSrc": "assets/portfolio_websites/autena.png",
     "title": "Autodalių parduotuvės reprezentacinė svetainė",
     "text": "Utenoje esančios automobilių dalių parduotuvės reprezentacinė svetainė, sukurta naudojant HTML, CSS, JavaScript ir WordPress technologijas",
     "gitHubLink": "https://github.com/pauliusmarkunas/Autena-Website",
     "siteLink": "https://autena.lt/"
+  },
+  {
+    "category": ["Visi projektai", "JavaScript"],
+    "imgSrc": "assets/portfolio_websites/pomodoro.png",
+    "title": "Laiko valdymo programėlė",
+    "text": "Vienas pirmųjų mano JavaScript projektų, parodantis, kaip dirbti su įvairiais medijų tipais. Projektas paremtas garsia „pomodoro“ technika",
+    "gitHubLink": "https://github.com/pauliusmarkunas/Pomodoro",
+    "siteLink": "https://pauliusmarkunas.github.io/Pomodoro/"
   },
   {
     "category": ["Visi projektai", "JavaScript", "Žaidimai"],
@@ -24,14 +45,6 @@
     "siteLink": "https://pauliusmarkunas.github.io/nftlanding-landing-page/"
   },
   {
-    "category": ["Visi projektai", "JavaScript"],
-    "imgSrc": "assets/portfolio_websites/pomodoro.png",
-    "title": "Laiko valdymo programėlė",
-    "text": "Vienas pirmųjų mano JavaScript projektų, parodantis, kaip dirbti su įvairiais medijų tipais. Projektas paremtas garsia „pomodoro“ technika",
-    "gitHubLink": "https://github.com/pauliusmarkunas/Pomodoro",
-    "siteLink": "https://pauliusmarkunas.github.io/Pomodoro/"
-  },
-  {
     "category": ["Visi projektai", "Internetinės svetainės", "HTML ir CSS"],
     "imgSrc": "assets/portfolio_websites/omnifood.png",
     "title": "Programėlės reprezentacinė svetainė",
@@ -46,18 +59,5 @@
     "text": "Žodžių spėlionės žaidimas, sukurtas naudojant Node.js, OpenAI API, bootstrap CSS technologijas. AI generuoja žodžius ir aprašymus. Vieno žaidėjo ir dviejų žaidėjų režimai, sudėtingumo lygiai, strateginės 'galios', garso efektai suteikia žaidimui įdomumo",
     "gitHubLink": "https://github.com/pauliusmarkunas/Gues-Word-Game",
     "siteLink": "https://pauliusmarkunas.github.io/Gues-Word-Game/"
-  },
-  {
-    "category": [
-      "Visi projektai",
-      "Node js",
-      "React js",
-      "Internetinės aplikacijos"
-    ],
-    "imgSrc": "assets/portfolio_websites/guest-flow.png",
-    "title": "GuestFlow - internetinė platforma",
-    "text": "Internetinė renginių dalyvių registracijos platforma. Sistema leidžia pridėti dalyvius į renginius, peržiūrėti ir tvarkyti registracijos sąrašus. Programavimui naudota React.js vartotojo sąsajai, Node.js serverio daliai ir PostgreSQL duomenų saugojimui.",
-    "gitHubLink": "https://github.com/pauliusmarkunas/events-frontend",
-    "siteLink": "https://guestflow.pauliusweb.lt/"
   }
 ]
